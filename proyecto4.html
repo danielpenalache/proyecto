@@ -1,0 +1,310 @@
+<?php
+session_start();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <title>TrucksLogistics</title>
+</head>
+<body>
+</header>
+
+<div id="Inicio">
+  <!-- Contenido de la sección Inicio de la página -->
+</div>
+
+<header class="text-gray-700 body-font border-b border-gray-200">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="https://tailblocks.cc" target="_blank">
+        <span class="ml-3 text-xl">TrucksLogistics</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <?php
+            if (isset($_SESSION['username'])) {
+                echo '<a class="mr-5 hover:text-gray-900">' . $_SESSION['username'] . '</a>';
+                echo '<form method="post" action="logout.php">'; // En este ejemplo, "logout.php" es el archivo donde manejas el cierre de sesión.
+                echo '<button type="submit" name="logout" class="inline-flex text-white bg-red-500 border-0 py-0 px-1 focus:outline-none hover:bg-red-600 rounded text-lg">Cerrar sesión</button>';
+                echo '</form>';
+            } else {
+                echo '<button class="inline-flex text-white bg-indigo-500 border-0 py-0 px-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">';
+                echo '<a href="LOGIN.html">Sign up or Login</a>';
+                echo '</button>';
+            }
+            ?>
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-0 px-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          <a href="#servicios">Servicios</a>
+        </button>
+
+        <a class="mr-5 hover:text-gray-900">    </a>
+
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-0 px-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          <a href="#final">Contacto</a>
+        </button>
+        
+        <a class="mr-5 hover:text-gray-900">    </a>
+
+
+        
+      </nav>
+    
+    </div>
+
+      </header>
+      
+      <section class="text-gray-700 body-font">
+        <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+          <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+            <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Sobre nosotros...
+            </h1>
+            <p class="mb-8 leading-relaxed">Nosotros somos una Micro Empresa Colombiana especializada en la entrega de pedidos personalizados en paqueteria y logistica, ofrecemos una alta cantidad de servicios asi mismo dando la satisfaccion y eficiencia a nuestros clientes para que cada uno de sus productos lleguen sin inconvenientes y con exito, asi mismo que nuestros clientes tengan la seguridad de quien esta conduccion el camion, el tipo de camion, hora de salid y hora de llegada, camino recorrido, entre muchas otras cosas.
+            </p>
+            <div class="flex justify-center">
+            </div>
+          </div>
+          <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+            <img class="object-cover object-center rounded" alt="hero" src="https://media.discordapp.net/attachments/1099006328539725835/1214740927118053406/truckpng.png?ex=65fa36a5&is=65e7c1a5&hm=a226a4cb3e07bf38b0af3c14430bbf2ba9b2b2ccdc0c5724a68c2b3da6feea6b&=&format=webp&quality=lossless&width=671&height=671">
+          </div>
+        </div>
+
+      </section>
+      <section class="text-gray-700 body-font border-t border-gray-200">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h2 class="text-xs text-indigo-500 tracking-widest font-medium title-font mb-1">Informacion</h2>
+            <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900">Detalles</h1>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                  <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">Formas de envio y entrega</h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Verificamos y nos comunicamos para dialogar sobre las distintas formas de envio de tus pedidos, recogemos tu envio ya sea en la puerta de tu casa o la mercancia solicitada y la llevamos a su destino sin riesgo alguno.
+                </p>
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d=""></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                  <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                      <circle cx="12" cy="7" r="4"></circle>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">Informacion de tu pedido</h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Optimizamos, almacenamos y verificamos cada minuto sobre los de detalles de tu pedido, la hora exacta en la cual llegara, el conductor, el tipo de camion,  junto con el recorrido que ha transcurrido tu pedido.
+                </p>
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d=""></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 md:w-1/3">
+              <div class="flex rounded-lg h-full bg-gray-100 p-8 flex-col">
+                <div class="flex items-center mb-3">
+                  <div class="w-8 h-8 mr-3 inline-flex items-center justify-center rounded-full bg-indigo-500 text-white flex-shrink-0">
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
+                      <circle cx="6" cy="6" r="3"></circle>
+                      <circle cx="6" cy="18" r="3"></circle>
+                      <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                    </svg>
+                  </div>
+                  <h2 class="text-gray-900 text-lg title-font font-medium">Garantia de envios</h2>
+                </div>
+                <div class="flex-grow">
+                  <p class="leading-relaxed text-base">Demostramos un buen enfoque en la innovacion de tecnologias y un alto desempeño de nuestros trabajadores a la hora de hacer sus envios, porque apesar de enfrentar diversidades haran llegar tu pedido a tu destino.</p>
+                    <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+                      <path d=""></path>
+                    </svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="servicios">
+          <!-- Contenido de la sección Servicios de la página -->
+        </div>
+
+      </section>
+      <section class="text-gray-700 body-font border-t border-gray-200">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-wrap w-full mb-20 flex-col items-center text-center">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Servicios </h1>
+            <p class="lg:w-1/2 w-full leading-relaxed text-base">Esto es lo que ofrecemos como empresa de transportes nacionales</p>
+          </div>
+          <div class="flex flex-wrap -m-4">
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Seguridad y confiabilidad</h2>
+                <p class="leading-relaxed text-base">Ofreceremos nuestros servicios de envio con seguridad, para brindar flexibilidad a los destinatarios.
+                </p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <path d="M20 4L8.12 15.88M14.47 14.48L20 20M8.12 8.12L12 12"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Rastreo en tiempo real</h2>
+                <p class="leading-relaxed text-base">Nuestros clientes y destinatarios podran analizar un seguimiento en tiempo real sobres sus envios atraves de un sistema implementado, para asi brindar tranquilidad y control sobre sus envios.
+                </p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                    <circle cx="12" cy="7" r="4"></circle>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Atencion al cliente</h2>
+                <p class="leading-relaxed text-base">Tanto clientes como destinatarios podran a acceder a informacion detallada y valiosa sobre cada uno de sus envios.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Cobertura y tiempos de entrega</h2>
+                <p class="leading-relaxed text-base">Ofreceremos tiempos razonables junto con una amplia cobertura de entrega para los envios solicitados y asi garantizar que los paquetes llleguen a su destino en el plazo de tiempo adecuado.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Comunicacion</h2>
+                <p class="leading-relaxed text-base">La Micro Empresa brindara un servicio de atencion al cliente eficiente y accesible, podran comunicarse facil y rapidamente, para recibir la informacion solicitada por ellos mismos.</p>
+              </div>
+            </div>
+            <div class="xl:w-1/3 md:w-1/2 p-4">
+              <div class="border border-gray-300 p-6 rounded-lg">
+                <div class="w-10 h-10 inline-flex items-center justify-center rounded-full bg-indigo-100 text-indigo-500 mb-4">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-6 h-6" viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                  </svg>
+                </div>
+                <h2 class="text-lg text-gray-900 font-medium title-font mb-2">Facilidad de pago y Facturacion</h2>
+                <p class="leading-relaxed text-base">Proporcionaremos opciones flexibles de pago y facturacion para nuestros clientes o destinatarios, lo cual simmplificara el proceso de envio.</p>
+              </div>
+            </div>
+            
+          </div>
+          <?php
+if (!isset($_SESSION['username'])) {
+    echo '<section class="text-gray-700 body-font">';
+    echo '<div class="container px-5 py-24 mx-auto">';
+    echo '<div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">';
+    echo '<p class="leading-relaxed text-lg text-red-500">Por favor, inicia sesión para poder registrar un envío.</p>';
+    echo '</div>';
+    echo '</div>';
+    echo '</section>';
+} else {
+    echo '<button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">';
+    echo '<a href="registro.html">Registrar un envío</a>';
+    echo '</button>';
+}
+?>
+        </div>
+      </section>
+      <section class="text-gray-700 body-font border-t border-gray-200">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-20">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Desarrolladores</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eleifend ultricies bibendum. Suspendisse potenti. Vestibulum a sem ac eros egestas lacinia sed sit amet erat</p>
+          </div>
+          <div class="flex flex-wrap -m-2">
+            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://media.discordapp.net/attachments/860557265954537522/1214474508912824381/IMG_0527.jpg?ex=65f93e86&is=65e6c986&hm=e88c3951833b9312d7cd2c140ddef819bbf221d363330690cc8ecab2499b9e97&=&format=webp&width=470&height=682">
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 title-font font-medium">Andres Pachon</h2>
+                  <p class="text-gray-500">Frontend</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://media.discordapp.net/attachments/1150952088113778710/1214767986909642772/IMG_0609.jpg?ex=65fa4fd9&is=65e7dad9&hm=be783b4b45def7516cc3811e05425e720af5ab084b474a8556cb0accb69feaf2&=&format=webp&width=503&height=671">
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 title-font font-medium">Nicolas Anacona</h2>
+                  <p class="text-gray-500">Designer</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 lg:w-1/3 md:w-1/2 w-full">
+              <div class="h-full flex items-center border-gray-200 border p-4 rounded-lg">
+                <img alt="team" class="w-16 h-16 bg-gray-100 object-cover object-center flex-shrink-0 rounded-full mr-4" src="https://media.discordapp.net/attachments/860557265954537522/1214641000899678269/Imagen_de_WhatsApp_2024-03-05_a_las_13.29.31_42364657.jpg?ex=65f9d995&is=65e76495&hm=c46481f7e9723ae9cb2348f585372f5310a6dbf6d6c02b46be490cff170765ae&=&format=webp&width=614&height=682">
+                <div class="flex-grow">
+                  <h2 class="text-gray-900 title-font font-medium">Daniel Lache</h2>
+                  <p class="text-gray-500">Backend</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">
+          <a href="#Inicio">Volver al inicio</a>
+        </button>
+      
+
+      </section>
+      <section class="text-gray-700 body-font border-t border-gray-200">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="xl:w-1/2 lg:w-3/4 w-full mx-auto text-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="inline-block w-8 h-8 text-gray-400 mb-8" viewBox="0 0 975.036 975.036">
+              <path d="M925.036 57.197h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.399 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l36 76c11.6 24.399 40.3 35.1 65.1 24.399 66.2-28.6 122.101-64.8 167.7-108.8 55.601-53.7 93.7-114.3 114.3-181.9 20.601-67.6 30.9-159.8 30.9-276.8v-239c0-27.599-22.401-50-50-50zM106.036 913.497c65.4-28.5 121-64.699 166.9-108.6 56.1-53.7 94.4-114.1 115-181.2 20.6-67.1 30.899-159.6 30.899-277.5v-239c0-27.6-22.399-50-50-50h-304c-27.6 0-50 22.4-50 50v304c0 27.601 22.4 50 50 50h145.5c-1.9 79.601-20.4 143.3-55.4 191.2-27.6 37.8-69.4 69.1-125.3 93.8-25.7 11.3-36.8 41.7-24.8 67.101l35.9 75.8c11.601 24.399 40.501 35.2 65.301 24.399z"></path>
+            </svg>
+            <p class="leading-relaxed text-lg">Contacta a nuestro equipo de soporte y ventas. Eres libre de preguntar cualquier cosa sobre nuestros productos o hacer alguna sugerencia. Nuestro correo es TrucksLogistics@gmail.com
+             
+              <div id="final">
+                <!-- Contenido de la sección final de la página -->
+              </div>
+              
+
+            </p>
+            <span class="inline-block h-1 w-10 rounded bg-indigo-500 mt-8 mb-6"></span>
+            <h2 class="text-gray-900 font-medium title-font tracking-wider text-sm">Author</h2>
+            <p class="text-gray-500">Andres Pachon</p>
+          </div>
+        </div>
+      </section>
+</body>
+</html>

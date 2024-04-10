@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css">
+    <title>TrucksLogistics</title>
+</head>
+<body>
+
+<header class="text-gray-700 body-font border-b border-gray-200">
+    <div class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+      <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0" href="https://tailblocks.cc" target="_blank">
+        <span class="ml-3 text-xl">TrucksLogistics</span>
+      </a>
+      <nav class="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <a href="proyecto4.html" class="inline-flex text-white bg-indigo-500 border-0 py-0 px-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">Inicio</a>
+        <a class="mr-5 hover:text-gray-900">    </a>
+        <button class="inline-flex text-white bg-indigo-500 border-0 py-0 px-1 focus:outline-none hover:bg-indigo-600 rounded text-lg">Imprimir PDF</button>
+        
+      </nav>
+    </div>
+</header>
+
+<section class="text-gray-600 body-font">
+    <section class="container px-5 py-24 mx-auto">
+      <div class="flex flex-col text-center w-full mb-12">
+        <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-gray-900">Registro de envíos</h1>
+        <p class="lg:w-2/3 mx-auto leading-relaxed text-base">Rellenar las casillas con la información adecuada</p>
+      </div>
+      <form id="registro-form" method="post" action="registro1.php" class="lg:w-2/3 w-full mx-auto">
+        <div class="flex flex-wrap -m-2">
+          <div class="p-2 w-full">
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="driver-name" class="leading-7 text-sm text-gray-600">Conductor</label>
+          <input type="text" id="driver-name" name="driver-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="license-plate" class="leading-7 text-sm text-gray-600">Placa</label>
+          <input type="text" id="license-plate" name="license-plate" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+          
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="cargo-type" class="leading-7 text-sm text-gray-600">Tipo de mercancía (Ejemplo: Electronicos)</label>
+          <input type="text" id="cargo-type" name="cargo-type" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="specific-cargo" class="leading-7 text-sm text-gray-600">Especifica la mercancía</label>
+          <input type="text" id="specific-cargo" name="specific-cargo" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="dispatch-city" class="leading-7 text-sm text-gray-600">Ciudad de despacho</label>
+          <input type="text" id="dispatch-city" name="dispatch-city" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="destination-city" class="leading-7 text-sm text-gray-600">Ciudad de destino</label>
+          <input type="text" id="destination-city" name="destination-city" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="dispatch-time" class="leading-7 text-sm text-gray-600">Hora de despacho AM/PM</label>
+          <input type="text" id="dispatch-time" name="dispatch-time" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="exporter-id" class="leading-7 text-sm text-gray-600">Cedula del exportador</label>
+          <input type="text" id="exporter-id" name="exporter-id" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="exporter-name" class="leading-7 text-sm text-gray-600">Nombre del exportador</label>
+          <input type="text" id="exporter-name" name="exporter-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="consignee-id" class="leading-7 text-sm text-gray-600">Cedula del consignatario</label>
+          <input type="text" id="consignee-id" name="consignee-id" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <div class="relative flex-grow w-full">
+          <label for="consignee-name" class="leading-7 text-sm text-gray-600">Nombre del consignatario</label>
+          <input type="text" id="consignee-name" name="consignee-name" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+        <div class="relative flex-grow w-full">
+          <label for="consignee-address" class="leading-7 text-sm text-gray-600">Dirección del consignatario</label>
+          <input type="text" id="consignee-address" name="consignee-address" class="w-full bg-gray-100 bg-opacity-50 rounded border border-gray-300 focus:border-indigo-500 focus:bg-transparent focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+        </div>
+      </div>
+
+      <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:space-x-4 sm:space-y-0 space-y-4 sm:px-0 items-end">
+        <button type="submit" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-1 px-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Enviar</button>
+        <a href="ver_registros.php" class="flex mx-auto mt-16 text-white bg-indigo-500 border-0 py-1 px-4 ml-4 focus:outline-none hover:bg-indigo-600 rounded text-lg">Ver Registros</a>
+      </div>
+    </div>
+  </div>
+</form>
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $campos_vacios = false;
+    $campos = array('driver-name', 'license-plate'); // Agrega aquí el resto de los campos
+    foreach ($campos as $campo) {
+        if (empty($_POST[$campo])) {
+            $campos_vacios = true;
+            break;
+        }
+    }
+    if ($campos_vacios) {
+        echo '<p class="text-red-600 text-center">Quedan espacios en blanco</p>';
+    } else {
+        // Procesa el formulario si no hay campos vacíos
+    }
+}
+?>
+  </section>
+</section>
+
+</body>
+</html>
